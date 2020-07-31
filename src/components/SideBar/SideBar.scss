@@ -1,0 +1,32 @@
+@import "./../../styles/base.scss";
+
+#sidebar {
+    background-color: $gray;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width: 210px;
+    padding: 15px;
+    height: 100vh;
+
+    .link-main {
+        padding: 10px 0;
+        border-bottom: 1px solid white;
+    }
+
+    .nav {
+        margin-top: 60px;
+    }
+
+    .link-footer {
+        height: 80px;
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 100%;
+        }
+    }
+}

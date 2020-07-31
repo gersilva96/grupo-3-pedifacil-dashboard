@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//Variables
+$gray: #313A46;
+$light-gray: #666666;
+$dark-blue: #073042;
+$dark-blue-transparent: #4285F460;
+$light-blue: #4285F4;
+$white-blue: #F9FBFE;
+$green: #39b54a;
+$shadow: 0 0 10px #00000050;
+$transition: all 400ms;
+$transition-short: all 100ms;
+
+$mobile: "min-width: 576px";
+$tablet: "min-width: 768px";
+$desktop: "min-width: 992px";
+$desktop-large: "min-width: 1200px";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Nunito, sans-serif;
+    text-decoration: none;
+}

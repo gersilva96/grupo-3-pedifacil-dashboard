@@ -1,0 +1,12 @@
+@import "./../../styles/base.scss";
+
+.nav_link {
+    background-color: $light-blue;
+    border-radius: 3px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 10px 0;
+}
