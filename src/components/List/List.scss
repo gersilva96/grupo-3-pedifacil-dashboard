@@ -1,1 +1,46 @@
 @import "./../../styles/base.scss";
+
+.card {
+    box-sizing: border-box;
+    min-height: 150px;
+    border-radius: 10px;
+    background-color: white;
+    border-left: 10px solid #00c853;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    table {
+
+        thead {
+
+            tr {
+                line-height: 35px;
+
+                th {
+                    text-transform: uppercase;
+                    text-align: start;
+                    min-width: 70px;
+                    color: $dark-blue;
+                }
+
+                th:nth-child(n+2) {
+                    text-align: center;
+                }
+            }
+
+        }
+
+        tbody {
+
+            tr {
+                line-height: 35px;
+
+                td:nth-child(n+2) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
