@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-//Componentes
-import SideBar from './components/SideBar/SideBar';
+import App from './components/App/App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <SideBar />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <Router>
+        <App />
+    </Router>
+, document.getElementById("root"));
