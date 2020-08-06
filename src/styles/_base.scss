@@ -7,6 +7,7 @@ $dark-blue: #073042;
 $dark-blue-transparent: #4285F460;
 $light-blue: #4285F4;
 $white-blue: #F9FBFE;
+$white-blue-transparent: #F9FBFE99;
 $green: #39b54a;
 $shadow: 0 0 10px #00000050;
 $transition: all 400ms;
@@ -21,6 +22,10 @@ $desktop-large: "min-width: 1200px";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, Nunito, sans-serif;
+    font-family: Nunito, sans-serif;
     text-decoration: none;
+}
+
+body {
+    background-color: #eceff1;
 }
