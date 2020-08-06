@@ -1,0 +1,16 @@
+@import "./../../styles/base.scss";
+
+#app {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .right-panel {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media (min-width: 960px) {
+            width: calc(100vw - 250px);
+        }
+    }
+}
