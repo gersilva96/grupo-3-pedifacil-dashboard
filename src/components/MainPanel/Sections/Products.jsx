@@ -49,7 +49,7 @@ const Products = () => {
                 <Total title="El más vendido" total={mostSold} />
             </div>
             <div className="row">
-                <List title="Los 10 más vendidos" list={topTen} thead={["Producto"]} />
+                <List title="Los 10 más vendidos" list={topTen} thead={["Producto", "Vendidos"]} />
                 <List title="Listado de productos" list={productsList} thead={["Producto", "Stock", "Precio"]} />
             </div>
         </Fragment>
