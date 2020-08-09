@@ -19,7 +19,7 @@ const theme = createMuiTheme({
 const List = ({ title, list, thead }) => {
     return (
         <div className="col-12 col-xl-6 mb-5">
-            <Box boxShadow={3} className="card">
+            <Box boxShadow={3} className="list-card">
                 <ThemeProvider theme={theme}>
                     <Typography variant="h5" component="h3">{title}</Typography>
                 </ThemeProvider>

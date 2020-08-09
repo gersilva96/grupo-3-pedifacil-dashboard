@@ -19,7 +19,7 @@ const Total = ({ title, total }) => {
 
     return (
         <div className="col-12 col-md-6 col-xl-3 mb-5">
-            <Box boxShadow={3} className="card">
+            <Box boxShadow={3} className="total-card">
                 <Typography variant="h5" component="h3">{title}</Typography>
                 <Divider variant="fullWidth" />
                 <span id={getId(total)}>{total}</span>
