@@ -21,7 +21,7 @@ const Users = () => {
     useEffect(() => {
         document.title = "Usuarios | Dashboard Pedí Fácil";
 
-        apiCall("http://localhost:3001/api/v1/users", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/users`, data => {
             setUsers(data.count);
             setBuyers(data.buyers.length);
             setSellers(data.sellers.length);

@@ -21,24 +21,24 @@ const Home = () => {
     useEffect(() => {
         document.title = "Inicio | Dashboard Pedí Fácil";
 
-        apiCall("http://localhost:3001/api/v1/orders/total", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/orders/total`, data => {
             setGeneratedOrders(data);
         });
 
-        apiCall("http://localhost:3001/api/v1/products", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, data => {
             setSoldProducts(data.sold);
         });
 
-        apiCall("http://localhost:3001/api/v1/products/commodities/total", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products/commodities/total`, data => {
             setCommodityTotal(data);
         });
 
-        apiCall("http://localhost:3001/api/v1/users", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/users`, data => {
             setSellersTotal(data.sellers.length);
             setUserRoles(data.countByRole);
         });
 
-        apiCall("http://localhost:3001/api/v1/products/recents", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products/recents`, data => {
             setLastProducts(data);
         });
 

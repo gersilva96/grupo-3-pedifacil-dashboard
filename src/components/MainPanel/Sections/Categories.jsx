@@ -17,7 +17,7 @@ const Categories = () => {
     useEffect(() => {
         document.title = "Categorías | Dashboard Pedí Fácil";
 
-        apiCall("http://localhost:3001/api/v1/products", data => {
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, data => {
             setTotal(data.countByCategory.length);
             setList(data.countByCategory);
         });
