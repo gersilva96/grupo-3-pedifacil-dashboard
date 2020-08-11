@@ -21,25 +21,25 @@ const Home = () => {
     useEffect(() => {
         document.title = "Inicio | Dashboard Pedí Fácil";
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/orders/total`, data => {
-            setGeneratedOrders(data);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/orders/total`, result => {
+            setGeneratedOrders(result.data);
         });
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, data => {
-            setSoldProducts(data.sold);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, result => {
+            setSoldProducts(result.data.sold);
         });
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products/commodities/total`, data => {
-            setCommodityTotal(data);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products/commodities/total`, result => {
+            setCommodityTotal(result.data.total);
         });
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/users`, data => {
-            setSellersTotal(data.sellers.length);
-            setUserRoles(data.countByRole);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/users`, result => {
+            setSellersTotal(result.data.sellers.length);
+            setUserRoles(result.data.countByRole);
         });
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products/recents`, data => {
-            setLastProducts(data);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products/recents`, result => {
+            setLastProducts(result.data.products);
         });
 
     }, []);     //Al tener como segundo parámetro un array vacío, sólo se ejecuta al montarse, similar a componentDidMount()

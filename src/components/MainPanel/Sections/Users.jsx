@@ -21,13 +21,13 @@ const Users = () => {
     useEffect(() => {
         document.title = "Usuarios | Dashboard Pedí Fácil";
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/users`, data => {
-            setUsers(data.count);
-            setBuyers(data.buyers.length);
-            setSellers(data.sellers.length);
-            setAdmins(data.admins.length);
-            setBuyersList(data.buyers);
-            setSellersList(data.sellers);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/users`, result => {
+            setUsers(result.data.count);
+            setBuyers(result.data.buyers.length);
+            setSellers(result.data.sellers.length);
+            setAdmins(result.data.admins.length);
+            setBuyersList(result.data.buyers);
+            setSellersList(result.data.sellers);
         });
     }, []);     //Al tener como segundo parámetro un array vacío, sólo se ejecuta al montarse, similar a componentDidMount()
 

@@ -17,9 +17,9 @@ const Categories = () => {
     useEffect(() => {
         document.title = "Categorías | Dashboard Pedí Fácil";
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, data => {
-            setTotal(data.countByCategory.length);
-            setList(data.countByCategory);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, result => {
+            setTotal(result.data.countByCategory.length);
+            setList(result.data.countByCategory);
         });
     }, []);     //Al tener como segundo parámetro un array vacío, sólo se ejecuta al montarse, similar a componentDidMount()
 

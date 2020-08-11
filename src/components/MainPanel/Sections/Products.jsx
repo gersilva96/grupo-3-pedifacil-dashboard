@@ -21,14 +21,14 @@ const Products = () => {
     useEffect(() => {
         document.title = "Productos | Dashboard Pedí Fácil";
 
-        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, data => {
-            setProductsTotal(data.total);
-            setProductsStock(data.withStock);
-            setProductsSold(data.sold);
-            setMostSold(data.mostSold);
-            setTopTen(data.topTen);
+        apiCall(`http://${process.env.REACT_APP_HOST}:3001/api/v1/products`, result => {
+            setProductsTotal(result.data.total);
+            setProductsStock(result.data.withStock);
+            setProductsSold(result.data.sold);
+            setMostSold(result.data.mostSold);
+            setTopTen(result.data.topTen);
             const list = [];
-            data.products.forEach(product => {
+            result.data.products.forEach(product => {
                 list.push({
                     name: product.name,
                     stock: product.stock,
